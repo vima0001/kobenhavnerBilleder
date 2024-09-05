@@ -2,12 +2,106 @@
 import MainLayout from "../layouts/MainLayout.astro";
 import Button from "../components/Button.astro";
 import Link from "../components/Link.astro";
+import Kapitel from "../components/Kapitel.astro";
 ---
 
 <MainLayout title="Titel">
-  <article>
-    <h1>Index overskrift</h1>
-    <Button>Klik!</Button>
-    <p>test2 <Link href="https://www.kea.dk" target="_blank">En anden side</Link></p>
-  </article>
+  <!-- Hero sektionen -->
+  <div class="py-10 md:grid grid-cols-2">
+    <div>
+      <img src="src/assets/images/foraar-med-et-agfa-le-box-2021-17.jpg" alt="" />
+    </div>
+    <div class="px-10 flex items-center">
+      <div>
+        <h1 class="text-3xl">Københavnerbilleder - En guide til hipster foto</h1>
+        <h2 class="text-2xl italic">Af Sten Simons</h2>
+        <p>Københavnerbilleder er de danske streetfotografers bibel: Det er en fusion mellem et kunstværk og en lærebog. Bogen gennemgår alle væsentlige aspekter af streetfotografering fra grundlæggende teknik til kreative eksperimenter. Alt sammen krydret med masser af inspirerende fotos. God læselyst!</p>
+        <Button>Køb bogen her</Button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Stamdata og facts -->
+  <div class="md:grid grid-cols-2">
+    <div class="flex flex-col justify-center items-center text-left">
+      <p>Titel: Københavnerbilleder - en guide til hipster foto</p>
+      <p>Forfatter: Sten Simons</p>
+      <p>Antal sider: 344</p>
+      <p>Forlag: Mellem Linjerne</p>
+      <p>ISBN: 987-6-987654-32-1</p>
+      <p>Pris: 399.-</p>
+    </div>
+    <div class="flex justify-center">
+      <p>Quick facts</p>
+    </div>
+  </div>
+
+  <!-- Billede sektion -->
+  <div class="md:grid grid-cols-3 px-40 gap-10">
+    <img src="src/assets/images/kobenhavnerbilleder-sten-simons.jpg" alt="" />
+    <img src="src/assets/images/kobenhavnerbilleder_oppefra.jpg" alt="" />
+    <img src="src/assets/images/kobenhavnerbilleder_aaben_venstre.jpg" alt="" />
+  </div>
+
+  <!-- Kapitlerne -->
+  <h1>Kapitlerne</h1>
+  <div class="md:grid grid-cols-2 px-40 gap-10">
+    <div>
+      <Kapitel kapitel="Kapitel 1 - Intro til street foto" tekst="Hvad er street foto? Det handler i bund og grund om at skyde byens liv og byens geometri (urban geometry). I dette kapitel får du en grundig intro til hvad street foto er og et overblik over nogen af de kendte street-fotografer. Alt krydret med en masse gode eksempler på street fotos." />
+      <Kapitel />
+      <Kapitel />
+      <Kapitel />
+    </div>
+    <div>
+      <Kapitel />
+      <Kapitel />
+      <Kapitel />
+      <Kapitel />
+    </div>
+  </div>
+
+  <!-- Anmeldelser -->
+  <div>
+    <h2></h2>
+  </div>
+  <div class="grid grid-cols-3">
+    <div>
+      <img src="" alt="" />
+      <p></p>
+    </div>
+    <div>
+      <img src="" alt="" />
+      <p></p>
+    </div>
+    <div>
+      <img src="" alt="" />
+      <p></p>
+    </div>
+  </div>
+
+  <!-- Galleri -->
+  <h3></h3>
+  <div class="grid md:grid-cols-4 gap-4 mx-auto w-full max-w-6xl">
+    <img src="src/assets/images/agfa-genanvendeligt-kamera-35mm-film-2-5.jpg" alt="" class="w-72 h-72" />
+    <img src="src/assets/images/amarminoen-med-et-agfa-le-box-11.jpg" alt="" class="w-72 h-72" />
+    <img src="src/assets/images/anamorfiske-landskaber-amager-faelled-4.jpg" alt="" class="w-72 h-72" />
+    <img src="src/assets/images/foraar-med-et-agfa-le-box-2021-17.jpg" alt="" class="w-72 h-72" />
+    <img src="src/assets/images/kbh-by-night-3.jpg" alt="" class="w-72 h-72" />
+    <img src="src/assets/images/lomo-smena-15.jpg" alt="" class="w-72 h-72" />
+    <img src="src/assets/images/lomo-smena-17.jpg" alt="" class="w-72 h-72" />
+    <img src="src/assets/images/orestad-til-islands-brygge-pentax-auto-110-14.jpg" alt="" class="w-72 h-72" />
+    <img src="src/assets/images/orestad-til-islands-brygge-pentax-auto-110-16.jpg" alt="" class="w-72 h-72" />
+    <img src="src/assets/images/orestad-til-islands-brygge-pentax-auto-110-17.jpg" alt="" class="w-72 h-72" />
+    <img src="src/assets/images/pinhole-objektiver-ved-eghjorten-3.jpg" alt="" class="w-72 h-72" />
+    <img src="src/assets/images/vinter-2021-med-lomo-smena-6.jpg" alt="" class="w-72 h-72" />
+  </div>
+
+  <!-- Forfatteren -->
+  <div class="grid grid-cols-2"></div>
+  <div class="grid grid-cols-2">
+    <img src="" alt="" />
+    <p></p>
+  </div>
+
+  <!-- Forms -->
 </MainLayout>
